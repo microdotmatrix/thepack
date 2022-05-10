@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import 'gerillass';
+
+html {
+  font-size: 118.2%;
+  @apply w-screen h-screen;
+}
+
+body {
+  @apply relative flex flex-col w-full h-full bg-slate-900 text-slate-200;
+}
+
+#app {
+  @apply grid w-full h-full place-content-center;
+}
+
+.container {
+  @include adaptive(2rem);
+}

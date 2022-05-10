@@ -1,0 +1,29 @@
+{
+  "name": "mxr",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.43",
+    "postcss-custom-properties": "^12.1.7",
+    "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.4.3",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^12.1.0",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@waaark/luge": "^0.6.7-beta",
+    "gerillass": "^1.3.0",
+    "gsap": "^3.10.2",
+    "jarallax": "^2.0.3",
+    "lightgallery": "^2.4.0",
+    "rolly.js": "^0.4.0",
+    "swiper": "^8.1.0"
+  }
+}
