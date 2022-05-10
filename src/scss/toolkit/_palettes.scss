@@ -1,0 +1,38 @@
+// 
+// Just continuing to use my color swatch function to make everything easier;
+// This is where I can load other swatches and palettes I might want to use other
+// than Open Color. Got Tailwind's 'Slate' swatches, because I love cool grays,
+// could probably do the same with the 'Stone' and 'Zinc' swatches as well, if you're
+// into that sort of thing...
+// 
+
+
+//  Gray
+//  ───────────────────────────────────
+
+$slate-list: (
+   "1": #FCFEFF,
+   "2": #E7F1FA,
+   "3": #D4E0E9,
+   "4": #C0CFDF,
+   "5": #727C8B,
+   "6": #546071,
+   "7": #3C4655,
+   "8": #181B20,
+   "9": #09090B
+);
+
+// Palette Selector
+
+@function slate($shade) {
+
+   @if map-has-key($slate-list, #{$shade}) {
+      $shade: map-get($slate-list, #{$shade});
+   } @else {
+      @if type-of($shade) != colour {
+         @error "Invalid colour name: `#{$shade}`.";
+      }
+   }
+
+   @return $shade;
+}

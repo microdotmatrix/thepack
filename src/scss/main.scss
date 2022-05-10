@@ -1,12 +1,23 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "~tailwindcss/base",
+        "~tailwindcss/components",
+        "~tailwindcss/utilities";
 
-@import 'gerillass';
+@import "~gerillass";
+
+@import "toolkit/open-color",
+        "toolkit/palettes",
+        "~nord/src/sass/nord",
+        "toolkit/mixins",
+        "toolkit/flex-grid";
+
+@import "config";
+
+
+
 
 html {
   font-size: 118.2%;
-  @apply w-screen h-screen;
+  @apply w-full h-full;
 }
 
 body {
