@@ -1,0 +1,27 @@
+:where(html) {
+  --icon-size: var(--lg);
+}
+
+i, .icon {
+  @apply inline-flex justify-center items-center align-middle;
+  @include sizer(var(--icon-size));
+  transition: all 300ms ease;
+  &:hover {
+    filter: brightness(1.5);
+  }
+  svg {
+    @apply w-full h-full object-fill;
+  }
+}
+
+.i\:h1 { --icon-size: #{$h1}; }
+.i\:h2 { --icon-size: #{$h2}; }
+.i\:h3 { --icon-size: #{$h3}; }
+.i\:h4 { --icon-size: #{$h4}; }
+.i\:h5 { --icon-size: #{$h5}; }
+.i\:xl { --icon-size: #{$xl}; }
+.i\:lg { --icon-size: #{$lg}; }
+.i\:md { --icon-size: #{$md}; }
+.i\:sm { --icon-size: #{$sm}; }
+.i\:p  { --icon-size: #{$p};  }
+.i\:100 { --icon-size: 100%; }

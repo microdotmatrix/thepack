@@ -26,7 +26,8 @@ $fluid-text-sizes: (
    "h2" : clamp(4.236rem, 4.34vw + 2.854rem, 6.854rem),
    "h3" : clamp(2.618rem, 2.69vw + 1.236rem, 4.236rem),
    "h4" : clamp(1.618rem, 1.84vw + 1.121rem, 2.618rem),
-   "h5" : clamp(1.314rem, 0.82vw + 1.618rem, 1.618rem)
+   "h5" : clamp(1.314rem, 0.82vw + 1.618rem, 1.618rem),
+   "h6" : clamp(1.101rem, 0.60vw + 1.303rem, 1.303rem)
 );
 
 $fluid-sizes: (

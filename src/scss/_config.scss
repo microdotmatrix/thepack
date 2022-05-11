@@ -1,7 +1,8 @@
 // Init Sass Color Functions
 @import "toolkit/open-color",
         "toolkit/palettes",
-        "~nord/src/sass/nord";
+        "~nord/src/sass/nord",
+        "toolkit/gradients";
 
 //
 // Using Gorko to generate color theme properties based on some variable maps
@@ -19,12 +20,14 @@ $light-colors: (
   'secondary': #f3f3f3,
   'text': ocGray(9),
   'body': slate(1),
-  'heading': $nord1,
-  'subheading': $nord3,
+  'heading': $nord2,
+  'subheading': slate(5),
   'accent': $nord7,
   'descent': $nord3,
   'mid': slate(5),
-  'alt': ocGray(5)
+  'alt': ocGray(5),
+  'link': ocGray(8),
+  'link-hover': slate(6)
 );
 
 // Color map for "Dark / Alternate" color theme (inverse contrast to light theme)
@@ -38,7 +41,9 @@ $dark-colors: (
   'accent': $nord3,
   'descent': $nord7,
   'mid': slate(5),
-  'alt': ocGray(5)
+  'alt': ocGray(5),
+  'link': $nord7,
+  'link-hover': slate(3)
 );
 
 // Configuration to initialize Gorko to generate theme properties
@@ -75,8 +80,8 @@ $map-for-breakpoints: (
   "small":    48rem,   // 768px
   "medium":   64rem,   // 1024px
   "large":    80rem,   // 1280px
-  "xlarge":   90rem,   // 1440px
-  "2xlarge":  112.5rem // 1800px
+  "xlarge":   90rem   // 1440px
+  // "2xlarge":  112.5rem // 1800px
 );
 
 // Selected custom properties from Open Props
@@ -89,9 +94,40 @@ $map-for-breakpoints: (
 @import "toolkit/social-colors";
 @import "toolkit/easing";
 
-$phi: var(--phi);
-$e:   var(--e);
-$pi:  var(--pi);
-$space-phi: var(--space-phi);
-$space-e:  var(--space-e);
-$space-pi: var(--space-pi);
+$content-width:       map-get($map-for-breakpoints, xlarge);
+
+// Porting CSS custom props into Sass variables for easier typing shorthand
+$phi:                 var(--phi);
+$e:                   var(--e);
+$pi:                  var(--pi);
+$space:               var(--space-phi);
+$space-phi:           var(--space-phi);
+$space-e:             var(--space-e);
+$space-pi:            var(--space-pi);
+
+$p:                   var(--p);
+$sm:                  var(--sm);
+$md:                  var(--md);
+$lg:                  var(--lg);
+$xl:                  var(--xl);
+$xxl:                 var(--xxl);
+$xxxl:                var(--xxxl);
+$xxxxl:               var(--xxxxl);
+
+$h1:                  var(--h1);
+$h2:                  var(--h2);
+$h3:                  var(--h3);
+$h4:                  var(--h4);
+$h5:                  var(--h5);
+$h6:                  var(--h6);
+
+// Some Sass variables to call up fonts imported into "/scss/toolkit/fonts"
+$barlow:             'Barlow', sans-serif;
+$genos:              'Genos', sans-serif;
+$kanit:              'Kanit', sans-serif;
+
+$text-font:           $barlow;
+$text-line:           1.618rem;
+$text-weight:         300;
+$heading-font:        $genos;
+$heading-weight:      500;

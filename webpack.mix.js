@@ -1,9 +1,8 @@
 let mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
-var baseDir = 'thepack';
-
 mix.js('src/js/app.js', 'js')
+  .extract(['jquery', 'gsap'], 'js/lib.js')
   .sass('src/scss/main.scss', 'css')
   .options({
     processCssUrls: false,
@@ -16,11 +15,10 @@ mix.js('src/js/app.js', 'js')
   })
   .setPublicPath('dist')
   .browserSync({
-    proxy: ['localhost/'+baseDir+'/dist'],
+    proxy: 'localhost/thepack/dist',
+    port: 8080,
     watch: true,
     files: ['src/**/*.{html,js,scss}']
   })
   .copy('src/**/*.html', 'dist')
-  .autoload({
-    jquery: ['$', 'window.jQuery']
-  });
+  .copy('src/svg/bootstrap-icons.svg', 'dist/svg')

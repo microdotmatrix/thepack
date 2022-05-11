@@ -19,24 +19,43 @@ html {
 }
 
 body {
-  color: var(--x);
-  font-size: var(--x);
-  font-family: var(--x);
-  font-weight: 300;
-  background-image: var(--gradient-16);
-  background-size: 100%;
+  color: var(--color-text);
+  font-size: var(--base);
+  font-family: $text-font;
+  font-weight: $text-weight;
+  background-image: gradient(metallic-fade);
+  background-size: 180%;
   background-attachment: fixed;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-	@apply flex flex-col place-content-between w-full h-full relative;
+  scroll-behavior: smooth;
+	@apply flex flex-col place-content-between w-full min-h-screen relative;
+}
+
+a {
+  position: relative;
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 300ms ease;
+  &:hover,
+  &:focus {
+    color: var(--color-link-hover);
+    text-decoration: none;
+    font-weight: 600;
+  }
 }
 
 #app {
-  @apply grid w-full h-full place-content-center;
+  @apply grid w-full h-full;
 }
 
 .wrapper {
   @include adaptive(2rem);
+}
+
+.container {
+  @include adaptive($space);
 }

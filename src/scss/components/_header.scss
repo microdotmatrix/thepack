@@ -1,0 +1,28 @@
+.header {
+  @apply relative flex w-full h-full p-0;
+  .container {
+    @apply relative flex items-center justify-start;
+    @include adaptive($space);
+  }
+  &__title {
+    @apply flex-none px-8;
+  }
+  &__image {
+    @apply flex-none;
+    figure {
+      @include sizer(12rem);
+      img {
+        @apply relative w-full h-full object-cover;
+      }
+    }
+  }
+  &__menu {
+    @apply flex flex-1 w-full justify-end pr-10;
+    nav {
+      @apply relative w-full;
+      ul {
+        @apply flex items-center justify-end gap-10;
+      }
+    }
+  }
+}

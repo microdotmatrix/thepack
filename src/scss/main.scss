@@ -8,7 +8,8 @@
 
 // Init Sass Mixins & Flex Grid Tools
 @import "toolkit/mixins",
-        "toolkit/flex-grid";
+        "toolkit/flex-grid",
+        "toolkit/fonts";
 
 // Init Configuration Variables
 @import "config";
@@ -18,4 +19,9 @@
         "utilities/classes";
 
 // Load component styles
-@import "components/global";
+@import "components/global",
+        "components/media",
+        "components/typography",
+        "components/icons",
+        "components/header",
+        "components/footer";

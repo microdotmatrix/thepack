@@ -1,0 +1,27 @@
+.footer {
+  @apply relative flex;
+  .container {
+    @apply relative flex items-center justify-start;
+    @include adaptive($space);
+  }
+  &__info {
+    @apply flex-auto justify-start;
+  }
+  &__social {
+    @apply flex-1 flex justify-end;
+    nav {
+      ul {
+        @apply flex flex-col justify-center gap-4;
+        li {
+          @apply flex items-end justify-end text-right;
+          a {
+            vertical-align: middle;
+            i {
+              --icon-size: var(--md);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,15 +3,86 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Special Little Webpack</title>
+    <title>My Special Little Boilerplate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div id="app" class="grid place-content-center">
-      <h1>hi</h1>
+    <div id="app">
+
+      <!-- time to fill in some dummy content -->
+      <header class="header">
+        <div class="container">
+          <div class="header__image">
+            <figure class="logo"><img src="http://placeskull.com/180/180/121210/3" alt="Site Logo / Header Image"></figure>
+          </div>
+          <div class="header__title">
+            <h1>Dev Kit</h1>
+          </div>
+          <div class="header__menu">
+            <nav>
+              <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Here</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main id="index" class="content">
+        <div class="container">
+
+          <div class="content__box">
+            <h2>This is a heading</h2>
+            <h4 class="sub">And a subheading right here</h4>
+          </div>
+
+          <article>
+            <p>This is a content block, gotta get some content.</p>
+          </article>
+
+          <aside>
+            <h3>Pain Itself</h3>
+            <p>Oh hey, its another block for that content.</p>
+
+            <p>Might want to get some content to put here. Because this is not sufficient content.</p>
+          </aside>
+
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__info">
+            <span class="colophon">This is a colophon. It's where I take credit for stuff. &copy; 2022 Designed by John Polinski</span>
+          </div>
+
+          <div class="footer__social">
+            <nav>
+              <ul>
+                <li>
+                  <a href="https://github.com/microdotmatrix">Github <i class="icon"><svg fill="currentColor"><use xlink:href="svg/bootstrap-icons.svg#github"/></svg></i></a>
+                </li>
+                <li>
+                  <a href="https://facebook.com/john.polinski.5811">Facebook <i class="icon"><svg fill="currentColor"><use xlink:href="svg/bootstrap-icons.svg#facebook"/></svg></i></a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/mrselfdestruct">Codepen <i class="icon"><svg fill="currentColor"><use xlink:href="svg/bootstrap-icons.svg#code-slash"/></svg></i></a>
+                </li>
+                <li>
+                  <a href="mailto:therealjohnpolinski@gmail.com">Email <i class="icon"><svg fill="currentColor"><use xlink:href="svg/bootstrap-icons.svg#envelope"/></svg></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <!-- end the dummy -->
+
     </div>
+    <script src="js/lib.js" async defer></script>
     <script src="js/app.js" async defer></script>
   </body>
 </html>
