@@ -1,0 +1,42 @@
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		 animation-duration: 0.01ms !important;
+		 animation-iteration-count: 1 !important;
+		 transition-duration: 0.01ms !important;
+		 scroll-behavior: auto !important;
+	}
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 118.2%;
+}
+
+body {
+  color: var(--x);
+  font-size: var(--x);
+  font-family: var(--x);
+  font-weight: 300;
+  background-image: var(--gradient-16);
+  background-size: 100%;
+  background-attachment: fixed;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+	@apply flex flex-col place-content-between w-full h-full relative;
+}
+
+#app {
+  @apply grid w-full h-full place-content-center;
+}
+
+.wrapper {
+  @include adaptive(2rem);
+}

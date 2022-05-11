@@ -1,3 +1,8 @@
+// Init Sass Color Functions
+@import "toolkit/open-color",
+        "toolkit/palettes",
+        "~nord/src/sass/nord";
+
 //
 // Using Gorko to generate color theme properties based on some variable maps
 // for a primary theme (light colors) and a dark mode theme (dark colors)
@@ -61,7 +66,7 @@ $gorko-config: (
   )
 );
 
-// Initialize Gorko
+// Init Gorko
 @import "~gorko/gorko";
 
 // Set breakpoints used by Gerillass breakpoint mixin
@@ -83,3 +88,10 @@ $map-for-breakpoints: (
 @import "toolkit/fluid-sizes";
 @import "toolkit/social-colors";
 @import "toolkit/easing";
+
+$phi: var(--phi);
+$e:   var(--e);
+$pi:  var(--pi);
+$space-phi: var(--space-phi);
+$space-e:  var(--space-e);
+$space-pi: var(--space-pi);
