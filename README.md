@@ -1,6 +1,8 @@
 # This is my boilerplate
-#### *There are many like it but this one is mine...*
----
+###### *There are many like it but this one is mine...*
+
+![Screenshot](https://github.com/microdotmatrix/thepack/blob/master/src/img/webpack-kit-screenshot.png "Screenshot of index page")
+
 Made this repo to hold a basic skeleton package I've pieced together of the tools I would start pretty much any web development project with. It is simple, relatively unopinionated, and easy to configure. Quick synopsis:
 
 ### NPM DevDependencies:
@@ -11,11 +13,11 @@ Made this repo to hold a basic skeleton package I've pieced together of the tool
 I start with Laravel's Mix Webpack Bundler (stand-alone NPM package that runs independent of Laravel) just because it's simple. Can utilize the essential functions of Webpack with a really straightforward configuration syntax. SASS and PostCSS for all my CSS compiling, which may seem redundant but if combined effectively they are extremely handy and work well together. I use SASS for everything, have been a devoted user of this preprocessor since it first launched, so I don't leave my homepage without it... PostCSS has a lot of nifty unique features of its own to compliment it, and since I've recently adopted Tailwind as my cute redheaded style stepchild, PostCSS became essential.
 
 Expanding on this foundation, I have a couple of templating and aesthetic development packages for my front end toolkit that I typically find useful in just about any project...
-- jQuery
-- GSAP
-- Gerillass
-- Accoutrement
-- Tailwind v.3
-- Open Props
-- Bootstrap Icons
-- Luge
+* jQuery
+* GSAP
+* Gerillass
+* Accoutrement
+* Tailwind v.3
+* Open Props
+* Bootstrap Icons
+* Luge
