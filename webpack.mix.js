@@ -2,7 +2,7 @@ let mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
 mix.js('src/js/app.js', 'js')
-  .extract(['jquery', 'gsap'], 'js/lib.js')
+  .extract(['jquery', 'gsap', 'luge'], 'js/lib.js')
   .sass('src/scss/main.scss', 'css')
   .options({
     processCssUrls: false,

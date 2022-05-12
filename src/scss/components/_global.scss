@@ -34,6 +34,14 @@ body {
 	@apply flex flex-col place-content-between w-full min-h-screen relative;
 }
 
+html.trans,
+html.trans *,
+html.trans *:before,
+html.trans *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
 a {
   position: relative;
   color: var(--color-link);

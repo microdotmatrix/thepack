@@ -3,5 +3,6 @@ import {$,jQuery} from 'jquery';
 window.$ = $;
 window.jQuery = jQuery;
 
-import luge from '@waaark/luge'
+//import luge from '@waaark/luge'
 import { gsap, ScrollTrigger, Flip } from "gsap/all";
+

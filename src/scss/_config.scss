@@ -63,8 +63,14 @@ $gorko-config: (
 //        'color': $dark-colors
 //      )
 //    ),
+      'light': (
+        'prefix': '.theme-light',
+        'tokens': (
+          'color': $light-colors
+        )
+      ),
       'dark-toggle': (
-        'prefix': '[data-theme="dark"]',
+        'prefix': 'theme-dark',
         'tokens': (
           'color': $dark-colors
         )
