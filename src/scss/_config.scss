@@ -20,6 +20,7 @@ $light-colors: (
   'secondary': #f3f3f3,
   'text': ocGray(9),
   'body': slate(1),
+  'background': gradient(metallic-fade),
   'heading': $nord2,
   'subheading': slate(5),
   'accent': $nord7,
@@ -36,6 +37,7 @@ $dark-colors: (
   'secondary': #040405,
   'text': ocGray(1),
   'body': slate(9),
+  'background': gradient(dark-fade),
   'heading': $nord6,
   'subheading': $nord3,
   'accent': $nord3,
@@ -43,7 +45,7 @@ $dark-colors: (
   'mid': slate(5),
   'alt': ocGray(5),
   'link': $nord7,
-  'link-hover': slate(3)
+  'link-hover': slate(4)
 );
 
 // Configuration to initialize Gorko to generate theme properties
@@ -55,12 +57,12 @@ $gorko-config: (
           'color': $light-colors
         )
       ),
-      'dark': (
-        'prefers-color-scheme': 'dark',
-        'tokens': (
-          'color': $dark-colors
-        )
-      ),
+//    'dark': (
+//      'prefers-color-scheme': 'dark',
+//      'tokens': (
+//        'color': $dark-colors
+//      )
+//    ),
       'dark-toggle': (
         'prefix': '[data-theme="dark"]',
         'tokens': (

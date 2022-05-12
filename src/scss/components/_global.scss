@@ -23,8 +23,8 @@ body {
   font-size: var(--base);
   font-family: $text-font;
   font-weight: $text-weight;
-  background-image: gradient(metallic-fade);
-  background-size: 180%;
+  background-image: var(--color-background);
+  background-size: 200%;
   background-attachment: fixed;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;

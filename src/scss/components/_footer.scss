@@ -1,7 +1,8 @@
 .footer {
-  @apply relative flex;
+  @apply relative flex pt-6 pb-12 border-t border-slate-400/20;
+  background-color: rgba(black, 0.25);
   .container {
-    @apply relative flex items-center justify-start;
+    @apply relative flex items-start justify-start;
     @include adaptive($space);
   }
   &__info {
@@ -10,14 +11,15 @@
   &__social {
     @apply flex-1 flex justify-end;
     nav {
+      margin-right: 1rem;
       ul {
         @apply flex flex-col justify-center gap-4;
         li {
           @apply flex items-end justify-end text-right;
           a {
-            vertical-align: middle;
             i {
               --icon-size: var(--md);
+              vertical-align: text-bottom;
             }
           }
         }
