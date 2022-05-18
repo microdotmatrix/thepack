@@ -1,9 +1,8 @@
 module.exports = {
-  content: require('fast-glob').sync([
-    './**/*.hbs',
-    './**/*.html',
-    './assets/js/**/*.js'
-  ]),
+  content: [
+    './src/**/*.html',
+    './src/assets/js/**/*.js'
+  ],
   theme: {
     extend: {},
   },

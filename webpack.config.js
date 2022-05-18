@@ -50,7 +50,7 @@ module.exports = {
         // ./public directory is being served
         host: 'localhost',
         port: 3000,
-        proxy: 'webpack.wtf',
+        proxy: 'thepack.wtf:8080',
         files: [
           'src/**/*.html',
           'src/scss**/*.scss',
