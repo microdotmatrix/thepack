@@ -1,5 +1,9 @@
 @use "~accoutrement/sass/tools";
 
+// generating css props for my all my sizing and spacing units. yes, i have a strange fixation with
+// using the golden ratio, euler's constant, and pi as base integers for calculating all these
+// variables because i'm a nerd.
+
 $spacing-global: (
    "phi" : 1.618,
    "e" : 2.71828,
@@ -12,6 +16,9 @@ $spacing-global: (
    "space-pi" : calc(1.618rem * var(--pi))
 );
 
+// i love the clamp function, it makes fluid responsive design so much easier. came up with a
+// modular-scale inspired ratio to calculate some proportionate scaling for some different
+// scaled text sizes and applied them with clamp. these make life easier.
 $fluid-text-sizes: (
    "base" : clamp(1rem, 0.34vw + 0.91rem, 1.19rem),
    "p" : clamp(1rem, 0.314vw + 1.184rem, 1.314rem),
@@ -30,6 +37,7 @@ $fluid-text-sizes: (
    "h6" : clamp(1.101rem, 0.60vw + 1.303rem, 1.303rem)
 );
 
+// some general use fluid sizes that i think i got from Open Props?
 $fluid-sizes: (
    "1": clamp(.5rem, 1vw, 1rem),
    "2": clamp(1rem, 2vw, 1.5rem),
@@ -42,6 +50,8 @@ $fluid-sizes: (
    "9": clamp(15rem, 30vw, 20rem)
 );
 
+// definitely got these container sizes from Open Props. didn't care to load in all of their other
+// sizing props that i won't use just to get these so... ctrl+c/v.
 $container-sizes: (
    "article-1" : 20ch,
    "article-2" : 45ch,

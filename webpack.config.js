@@ -32,6 +32,7 @@ module.exports = {
   },
   plugins: [
     new WebpackManifestPlugin(),
+    // extract and compile css files and copy html into dist folder, if not using a JS based front end framework
     new MiniCssExtractPlugin({
       filename: isDev ? 'css/main.css' : 'css/main.[contenthash].css'
     }),
@@ -49,7 +50,8 @@ module.exports = {
         // ./public directory is being served
         host: 'localhost',
         port: 3000,
-        proxy: 'thepack.wtf:8080',
+        // Using Laragon running Nginx with virtual host urls on my development env, so my base urls always get generated as {folder-name}.wtf
+        proxy: 'thepack.wtf',
         files: [
           'src/**/*.html',
           'src/scss/**/*.scss',
@@ -61,6 +63,7 @@ module.exports = {
       }
     )
   ],
+  // minify code in production mode
   ...(!isDev && {
     optimization: {
       minimizer: [
@@ -70,6 +73,7 @@ module.exports = {
       ]
     }
   }),
+  // set config rules for babel, sass and postCss
   module: {
     rules: [
       {
@@ -97,6 +101,7 @@ module.exports = {
         test: /\.html$/i,
         type: "asset/resource",
       },
+      //
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset',

@@ -1,3 +1,6 @@
+// General utility classes
+
+// Hide something completely
 .hidden,
 .visuallyhidden,
 .hide {
@@ -13,16 +16,19 @@
 	width: 1px;
 }
 
+// Drop this wherever you need a finger pointer cursor without a link
 .pointer {
 	cursor: pointer;
 }
 
+// The one, the only, the legendary, ubiquitous CLEARFIX
 .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
+// Quick ref class for the animated color changing overlay
 .rgb-overlay {
   display: flex;
   width: 100%;

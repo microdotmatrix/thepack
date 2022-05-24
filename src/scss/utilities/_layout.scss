@@ -22,6 +22,7 @@
   @include row($direction: column);
 }
 
+// 12 column flex-box layout grid that adapts to single column on mobile
 $flex-columns: 12;
 
 @for $i from 1 through $flex-columns {
@@ -51,10 +52,10 @@ $flex-columns: 12;
 // ----
 // CSS Grid + Data-attributes
 // ----
-// So I said I'd do some grid stuff too, ok, here goes. I wrote this just before I got over my
-// reluctancy to embrace Tailwind, which makes shaping grid elements pretty simple on its own.
-// But I was proud of this little addition to my toolkit, especially having just been an exercise
-// of "can I?" Yeah. I can.
+// Inspired by Chris Coyier's nifty exanple of using data-attributes and CSS Grid together on css-tricks.com
+// https://css-tricks.com/a-complete-guide-to-data-attributes/
+// Cool thing about this trick is how it can be ported to variable controller fields in many CMS backends
+// so you can develop easy layout control functions for end-users that require no code.
 // ----
 
 [data-grid] {
@@ -75,6 +76,7 @@ $flex-columns: 12;
   grid-template-columns: var(--grid_adapt_mixin);
 }
 
+// Generate attribute classes for six columns, with a media query to make them fall in line on mobile
 $grid-columns: 6;
 
 @for $i from 1 through $grid-columns {
@@ -131,14 +133,17 @@ $grid-columns: 6;
   }
 }
 
+// add some vertical gutters
 [data-gutter="x"] {
   padding: 0 $space-phi;
 }
 
+// add some horizontal gutters
 [data-gutter="y"] {
   padding: calc(#{$space-e} / 2) 0;
 }
 
+// vertical AND horizontal gutters
 [data-gutter="x/y"] {
   padding: calc(#{$space-e} / 2) $space-phi;
 }
